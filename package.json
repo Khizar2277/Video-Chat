@@ -6,6 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "client": "cd client && npm start",
     "dev": "concurrently \"node index.js\" \"npm run client\""
   },
